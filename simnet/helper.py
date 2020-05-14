@@ -14,7 +14,11 @@ def suffled_digits(pathname):
     
 
 def sigmoid(x):
-    return 1 / (1 + math.exp(-x))
+    try:
+        res = 1 / (1 + math.exp(-x))
+    except:
+        print(x)
+    return res
 
 
 def sigmoid_prime(x):

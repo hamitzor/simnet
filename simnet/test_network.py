@@ -78,7 +78,7 @@ class Test(unittest.TestCase):
         output = net.forward(input)
         print(output[1])
         expected_output = np.array([0.0, 1.0])
-        net.backprop(input, expected_output)
+        net.backprop([(input, expected_output)])
         output = net.forward(input)
         print(output[1])
 
